@@ -4,3 +4,47 @@
 * {
   font-family: "Open Sans", sans-serif;
 }
+
+@mixin space {
+  padding: 10px 15px;
+  box-shadow: 0 0 5px rgba(black, 0.5);
+}
+
+body {
+}
+
+.App {
+  width: 640px;
+  margin: 25px auto;
+  @include space;
+  .Form {
+    font-size: 20px;
+    width: 400px;
+    margin: 25px auto;
+    @include space;
+    input {
+      margin: 10px 0 20px;
+    }
+    input[type="text"] {
+      padding: 5px 10px;
+      box-shadow: 0 0 2px purple;
+      transition: 0.3s;
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 5px darken(purple, 10%);
+      }
+    }
+    button {
+      cursor: pointer;
+      padding: 8px 20px;
+      border: 1px solid black;
+      border-radius: 4px;
+      background: purple;
+      color: white;
+      transition: 0.3s;
+      &:hover {
+        background: darken(purple, 5%);
+      }
+    }
+  }
+}

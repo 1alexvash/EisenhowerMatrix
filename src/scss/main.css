@@ -23,3 +23,53 @@ input {
 * {
   font-family: "Open Sans", sans-serif;
 }
+
+.App {
+  width: 640px;
+  margin: 25px auto;
+  padding: 10px 15px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.App .Form {
+  font-size: 20px;
+  width: 400px;
+  margin: 25px auto;
+  padding: 10px 15px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.App .Form input {
+  margin: 10px 0 20px;
+}
+
+.App .Form input[type="text"] {
+  padding: 5px 10px;
+  -webkit-box-shadow: 0 0 2px purple;
+          box-shadow: 0 0 2px purple;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .Form input[type="text"]:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 5px #4d004d;
+          box-shadow: 0 0 5px #4d004d;
+}
+
+.App .Form button {
+  cursor: pointer;
+  padding: 8px 20px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background: purple;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .Form button:hover {
+  background: #670067;
+}
