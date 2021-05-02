@@ -2,12 +2,14 @@ import React from "react";
 
 import "./scss/main.css";
 
+import { StoreProvider } from "easy-peasy";
+import store from "./store/store";
+
 const App = () => {
   return (
-    <div>
-      Hello World!
-      <button>Hello</button>
-    </div>
+    <StoreProvider store={store}>
+      <div className="App"></div>
+    </StoreProvider>
   );
 };
 
