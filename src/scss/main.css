@@ -20,6 +20,6 @@ input {
   width: 100%;
 }
 
-body {
-  font-family: Arial;
+* {
+  font-family: "Open Sans", sans-serif;
 }
