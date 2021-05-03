@@ -41,11 +41,8 @@ input {
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.App .Form input {
-  margin: 10px 0 20px;
-}
-
 .App .Form input[type="text"] {
+  margin: 5px 0 10px;
   padding: 5px 10px;
   -webkit-box-shadow: 0 0 2px purple;
           box-shadow: 0 0 2px purple;
@@ -57,6 +54,45 @@ input {
   outline: none;
   -webkit-box-shadow: 0 0 5px #4d004d;
           box-shadow: 0 0 5px #4d004d;
+}
+
+.App .Form .flex {
+  margin: 5px 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .Form .flex .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: purple;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: white;
+  margin: 0 5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-weight: bold;
+}
+
+.App .Form .flex input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .App .Form button {

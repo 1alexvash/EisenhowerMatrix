@@ -35,21 +35,27 @@ const Form = () => {
         onChange={(e) => updateInput("name", e.target.value)}
       />
       <label>0 Not Important | 10 Very Important:</label>
-      <input
-        type="range"
-        value={formValues.importance}
-        onChange={(e) => updateInput("importance", parseInt(e.target.value))}
-        min="1"
-        max="10"
-      />
+      <div className="flex">
+        <span className="number">{formValues.importance}</span>
+        <input
+          type="range"
+          value={formValues.importance}
+          onChange={(e) => updateInput("importance", parseInt(e.target.value))}
+          min="1"
+          max="10"
+        />
+      </div>
       <label>0 Not Urgent | 10 Very Urgent:</label>
-      <input
-        type="range"
-        value={formValues.urgency}
-        onChange={(e) => updateInput("urgency", parseInt(e.target.value))}
-        min="1"
-        max="10"
-      />
+      <div className="flex">
+        <span className="number">{formValues.urgency}</span>
+        <input
+          type="range"
+          value={formValues.urgency}
+          onChange={(e) => updateInput("urgency", parseInt(e.target.value))}
+          min="1"
+          max="10"
+        />
+      </div>
       <button type="submit" disabled={formValues.name === ""}>
         Submit
       </button>

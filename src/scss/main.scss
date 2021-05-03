@@ -23,15 +23,36 @@ body {
     margin: 25px auto;
     @include space;
     input {
-      margin: 10px 0 20px;
     }
     input[type="text"] {
+      margin: 5px 0 10px;
       padding: 5px 10px;
       box-shadow: 0 0 2px purple;
       transition: 0.3s;
       &:focus {
         outline: none;
         box-shadow: 0 0 5px darken(purple, 10%);
+      }
+    }
+    .flex {
+      margin: 5px 0 10px;
+      display: flex;
+      align-items: center;
+      .number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: purple;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        color: white;
+        margin: 0 5px;
+        user-select: none;
+        font-weight: bold;
+      }
+      input {
+        flex: 1;
       }
     }
     button {
