@@ -5,14 +5,16 @@ import React, { useState } from "react";
 
 import { useStoreActions } from "easy-peasy";
 
+const initialFormValues = {
+  name: "",
+  importance: 0,
+  urgency: 0,
+};
+
 const Form = () => {
   const { addTask } = useStoreActions((actions) => actions);
 
-  const [formValues, setFormValues] = useState({
-    name: "",
-    importance: 0,
-    urgency: 0,
-  });
+  const [formValues, setFormValues] = useState(initialFormValues);
 
   function updateInput(name, value) {
     setFormValues({
@@ -23,7 +25,9 @@ const Form = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    addTask();
+    addTask(formValues);
+
+    setFormValues(initialFormValues);
   }
 
   return (

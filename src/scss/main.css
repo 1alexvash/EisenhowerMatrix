@@ -67,6 +67,7 @@ input {
 }
 
 .App .Form .flex .number {
+  border: 1px solid #333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -101,7 +102,7 @@ input {
           flex: 1;
 }
 
-.App .Form button {
+.App .Form button[type="submit"] {
   cursor: pointer;
   padding: 8px 20px;
   border: 1px solid black;
@@ -112,11 +113,11 @@ input {
   transition: 0.3s;
 }
 
-.App .Form button:hover {
+.App .Form button[type="submit"]:hover {
   background: #670067;
 }
 
-.App .Form button:disabled {
+.App .Form button[type="submit"]:disabled {
   cursor: auto;
   background: grey;
 }
