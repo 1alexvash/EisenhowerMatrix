@@ -87,6 +87,12 @@ input {
       -ms-user-select: none;
           user-select: none;
   font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .Form .flex .number:disabled {
+  background: grey;
 }
 
 .App .Form .flex input {

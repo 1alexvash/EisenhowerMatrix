@@ -50,6 +50,10 @@ body {
         margin: 0 5px;
         user-select: none;
         font-weight: bold;
+        transition: 0.3s;
+        &:disabled {
+          background: grey;
+        }
       }
       input {
         flex: 1;

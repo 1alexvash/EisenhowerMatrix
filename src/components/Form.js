@@ -10,8 +10,8 @@ const Form = () => {
 
   const [formValues, setFormValues] = useState({
     name: "",
-    importance: 5,
-    urgency: 5,
+    importance: 0,
+    urgency: 0,
   });
 
   function updateInput(name, value) {
@@ -23,7 +23,7 @@ const Form = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // addTask();
+    addTask();
   }
 
   return (
@@ -36,27 +36,36 @@ const Form = () => {
       />
       <label>0 Not Important | 10 Very Important:</label>
       <div className="flex">
-        <span className="number">{formValues.importance}</span>
+        <button className="number" disabled={formValues.importance === 0}>
+          {formValues.importance}
+        </button>
         <input
           type="range"
           value={formValues.importance}
           onChange={(e) => updateInput("importance", parseInt(e.target.value))}
-          min="1"
+          min="0"
           max="10"
         />
       </div>
       <label>0 Not Urgent | 10 Very Urgent:</label>
       <div className="flex">
-        <span className="number">{formValues.urgency}</span>
+        <button className="number" disabled={formValues.urgency === 0}>
+          {formValues.urgency}
+        </button>
         <input
           type="range"
           value={formValues.urgency}
           onChange={(e) => updateInput("urgency", parseInt(e.target.value))}
-          min="1"
+          min="0"
           max="10"
         />
       </div>
-      <button type="submit" disabled={formValues.name === ""}>
+      <button
+        type="submit"
+        disabled={Object.keys(formValues).some(
+          (value) => Boolean(formValues[value]) === false
+        )}
+      >
         Submit
       </button>
     </form>
