@@ -45,6 +45,10 @@ body {
       &:hover {
         background: darken(purple, 5%);
       }
+      &:disabled {
+        cursor: auto;
+        background: grey;
+      }
     }
   }
 }

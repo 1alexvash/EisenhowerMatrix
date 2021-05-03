@@ -3,7 +3,11 @@
 
 import React, { useState } from "react";
 
+import { useStoreActions } from "easy-peasy";
+
 const Form = () => {
+  const { addTask } = useStoreActions((actions) => actions);
+
   const [formValues, setFormValues] = useState({
     name: "",
     importance: 5,
@@ -19,8 +23,7 @@ const Form = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-
-    console.log("The function was submitted");
+    // addTask();
   }
 
   return (
@@ -47,7 +50,9 @@ const Form = () => {
         min="1"
         max="10"
       />
-      <button type="submit">Submit</button>
+      <button type="submit" disabled={formValues.name === ""}>
+        Submit
+      </button>
     </form>
   );
 };

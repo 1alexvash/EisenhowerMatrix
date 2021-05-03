@@ -1,7 +1,10 @@
-import { createStore } from "easy-peasy";
+import { createStore, action } from "easy-peasy";
 
 const store = createStore({
-  hello: "Hello World!",
+  tasks: [],
+  addTask: action((state, payload) => {
+    console.log("payload:", payload);
+  }),
 });
 
 export default store;

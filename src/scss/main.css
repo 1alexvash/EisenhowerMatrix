@@ -73,3 +73,8 @@ input {
 .App .Form button:hover {
   background: #670067;
 }
+
+.App .Form button:disabled {
+  cursor: auto;
+  background: grey;
+}
