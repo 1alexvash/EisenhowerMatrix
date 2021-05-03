@@ -11,13 +11,15 @@ import "./scss/main.css";
 import { StoreProvider } from "easy-peasy";
 import store from "./store/store";
 
+import Map from "./components/Map";
 import Form from "./components/Form";
 
 const App = () => {
   return (
     <StoreProvider store={store}>
       <div className="App">
-        <Form />
+        <Map />
+        <Form isActive={false} />
       </div>
     </StoreProvider>
   );

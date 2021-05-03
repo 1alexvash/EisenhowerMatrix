@@ -1,5 +1,6 @@
 // TODO: probbably show this component in the pop up
-// TODO: add function to submit the data
+// TODO: Show toast pop up the task was added succesfully
+// TODO: add store condition in the store to conditionaly render this form
 
 import React, { useState } from "react";
 
@@ -11,7 +12,7 @@ const initialFormValues = {
   urgency: 0,
 };
 
-const Form = () => {
+const Form = ({ isActive }) => {
   const { addTask } = useStoreActions((actions) => actions);
 
   const [formValues, setFormValues] = useState(initialFormValues);
@@ -28,6 +29,10 @@ const Form = () => {
     addTask(formValues);
 
     setFormValues(initialFormValues);
+  }
+
+  if (isActive === false) {
+    return "";
   }
 
   return (
