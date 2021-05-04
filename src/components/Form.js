@@ -12,7 +12,7 @@ const initialFormValues = {
   urgency: 0,
 };
 
-const Form = () => {
+const Form = ({ history }) => {
   const { addTask } = useStoreActions((actions) => actions);
 
   const [formValues, setFormValues] = useState(initialFormValues);
@@ -29,6 +29,7 @@ const Form = () => {
     addTask(formValues);
 
     setFormValues(initialFormValues);
+    history.push("/");
   }
 
   return (

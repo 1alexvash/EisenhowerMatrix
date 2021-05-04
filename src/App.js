@@ -3,6 +3,7 @@
 // TODO: ability to delete tasks
 // TODO: store all the data in localStorage
 // TODO: Create app logo
+// TODO: Add about page
 
 import React from "react";
 
