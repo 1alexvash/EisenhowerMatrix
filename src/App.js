@@ -17,6 +17,8 @@ import Nav from "./components/Nav";
 import Map from "./components/Map";
 import Form from "./components/Form";
 
+import { ToastContainer } from "react-toastify";
+
 const App = () => {
   return (
     <StoreProvider store={store}>
@@ -27,6 +29,8 @@ const App = () => {
           <Route exact path="/add-new-task" component={Form} />
         </div>
       </Router>
+
+      <ToastContainer />
     </StoreProvider>
   );
 };

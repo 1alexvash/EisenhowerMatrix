@@ -1,10 +1,16 @@
 // TODO: probbably show this component in the pop up
 // TODO: Show toast pop up the task was added succesfully
 // TODO: add store condition in the store to conditionaly render this form
+// TODO: align dots
+// TODO: add restriction per position
+// TODO: make form responsive
 
 import React, { useState } from "react";
 
 import { useStoreActions } from "easy-peasy";
+
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const initialFormValues = {
   name: "",
@@ -30,6 +36,14 @@ const Form = ({ history }) => {
 
     setFormValues(initialFormValues);
     history.push("/");
+    toast.success("✅ The task was added", {
+      position: "bottom-left",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
   }
 
   function isNotValid() {
