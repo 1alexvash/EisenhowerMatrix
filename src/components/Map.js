@@ -6,10 +6,10 @@ const Map = () => {
   return (
     <div className="Map">
       <div className="container">
-        <div className="horizontal-lines">
+        <div className="lines lines-horizontal">
           {[numbers.map((n) => <div key={n} className="line" />)]}
         </div>
-        <div className="vertical-lines">
+        <div className="lines lines-vertical">
           {[numbers.map((n) => <div key={n} className="line" />)]}
         </div>
       </div>
