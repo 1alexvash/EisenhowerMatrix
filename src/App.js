@@ -12,6 +12,7 @@ import { StoreProvider } from "easy-peasy";
 import { HashRouter as Router } from "react-router-dom";
 import store from "./store/store";
 
+import Nav from "./components/Nav";
 import Map from "./components/Map";
 import Form from "./components/Form";
 
@@ -20,6 +21,7 @@ const App = () => {
     <StoreProvider store={store}>
       <Router>
         <div className="App">
+          <Nav />
           <Map />
           <Form isActive={false} />
         </div>

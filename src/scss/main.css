@@ -38,6 +38,60 @@ input {
   }
 }
 
+.App .Nav {
+  padding: 10px 15px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.App .Nav a {
+  font-size: 20px;
+  position: relative;
+  margin-right: 10px;
+  padding: 5px 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  background: #ffc966;
+  color: black;
+}
+
+.App .Nav a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  width: 0;
+  height: 3px;
+  background: #4d004d;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .Nav a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #4d004d;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .Nav a:hover:before, .App .Nav a.active:before {
+  width: 50%;
+}
+
+.App .Nav a:hover:after, .App .Nav a.active:after {
+  width: 50%;
+}
+
 .App .Map {
   padding: 10px 15px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);

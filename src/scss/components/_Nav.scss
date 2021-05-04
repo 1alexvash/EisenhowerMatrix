@@ -1,0 +1,46 @@
+.Nav {
+  @include space;
+  margin-bottom: 20px;
+  a {
+    font-size: 20px;
+    position: relative;
+    margin-right: 10px;
+    padding: 5px 10px;
+    transition: 0.3s;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background: lighten(orange, 20%);
+    color: black;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -3px;
+      right: 0;
+      width: 0;
+      height: 3px;
+      background: darken(purple, 10%);
+      transition: 0.3s;
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background: darken(purple, 10%);
+      transition: 0.3s;
+    }
+    &:hover,
+    &.active {
+      &:before {
+        width: 50%;
+      }
+      &:after {
+        width: 50%;
+      }
+    }
+  }
+}
