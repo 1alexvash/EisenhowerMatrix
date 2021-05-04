@@ -88,6 +88,17 @@ input {
   width: 2px;
 }
 
+.App .Map .container .task {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 1px solid black;
+  border-radius: 50%;
+  background: purple;
+}
+
 .App .Map .urgency {
   text-align: center;
 }
