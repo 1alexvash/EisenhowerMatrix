@@ -32,6 +32,12 @@ const Form = ({ history }) => {
     history.push("/");
   }
 
+  function isNotValid() {
+    return Object.keys(formValues).some(
+      (value) => Boolean(formValues[value]) === false
+    );
+  }
+
   return (
     <form onSubmit={handleSubmit} className="Form">
       <label>Name of the task:</label>
@@ -68,9 +74,8 @@ const Form = ({ history }) => {
       </div>
       <button
         type="submit"
-        disabled={Object.keys(formValues).some(
-          (value) => Boolean(formValues[value]) === false
-        )}
+        disabled={isNotValid()}
+        title={isNotValid() ? "Fill the data" : "Click to submit"}
       >
         Submit
       </button>
