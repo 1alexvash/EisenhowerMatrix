@@ -17,64 +17,7 @@ body {
   width: 640px;
   margin: 25px auto;
   @include space;
-  .Form {
-    font-size: 20px;
-    width: 400px;
-    margin: 25px auto;
-    @include space;
-    input {
-    }
-    input[type="text"] {
-      margin: 5px 0 10px;
-      padding: 5px 10px;
-      box-shadow: 0 0 2px purple;
-      transition: 0.3s;
-      &:focus {
-        outline: none;
-        box-shadow: 0 0 5px darken(purple, 10%);
-      }
-    }
-    .flex {
-      margin: 5px 0 10px;
-      display: flex;
-      align-items: center;
-      .number {
-        border: 1px solid #333;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: purple;
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        color: white;
-        margin: 0 5px;
-        user-select: none;
-        font-weight: bold;
-        transition: 0.3s;
-        &:disabled {
-          background: grey;
-        }
-      }
-      input {
-        flex: 1;
-      }
-    }
-    button[type="submit"] {
-      cursor: pointer;
-      padding: 8px 20px;
-      border: 1px solid black;
-      border-radius: 4px;
-      background: purple;
-      color: white;
-      transition: 0.3s;
-      &:hover {
-        background: darken(purple, 5%);
-      }
-      &:disabled {
-        cursor: auto;
-        background: grey;
-      }
-    }
-  }
+
+  @import "./components/Map";
+  @import "./components/Form";
 }
