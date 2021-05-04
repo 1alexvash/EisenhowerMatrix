@@ -14,9 +14,12 @@ body {
 }
 
 .App {
-  width: 640px;
+  width: 768px;
   margin: 25px auto;
   @include space;
+  @include responsive(800px) {
+    width: 100%;
+  }
 
   @import "./components/Map";
   @import "./components/Form";

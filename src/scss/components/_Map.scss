@@ -1,0 +1,50 @@
+.Map {
+  @include space;
+  .container {
+    @include space;
+    flex: 1;
+    position: relative;
+    padding-top: 100%;
+    padding-bottom: 0;
+    position: relative;
+    .horizontal-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      .line {
+        background: rgba(grey, 0.3);
+        height: 2px;
+      }
+    }
+    .vertical-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      .line {
+        background: rgba(grey, 0.3);
+        width: 2px;
+      }
+    }
+  }
+  .urgency {
+    text-align: center;
+    .scale {
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .text {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}
