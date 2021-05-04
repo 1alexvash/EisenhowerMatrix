@@ -12,7 +12,7 @@ const initialFormValues = {
   urgency: 0,
 };
 
-const Form = ({ isActive }) => {
+const Form = () => {
   const { addTask } = useStoreActions((actions) => actions);
 
   const [formValues, setFormValues] = useState(initialFormValues);
@@ -29,10 +29,6 @@ const Form = ({ isActive }) => {
     addTask(formValues);
 
     setFormValues(initialFormValues);
-  }
-
-  if (isActive === false) {
-    return "";
   }
 
   return (

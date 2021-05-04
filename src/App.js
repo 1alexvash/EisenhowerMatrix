@@ -9,7 +9,7 @@ import React from "react";
 import "./scss/main.css";
 
 import { StoreProvider } from "easy-peasy";
-import { HashRouter as Router } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import store from "./store/store";
 
 import Nav from "./components/Nav";
@@ -22,8 +22,8 @@ const App = () => {
       <Router>
         <div className="App">
           <Nav />
-          <Map />
-          <Form isActive={false} />
+          <Route exact path="/" component={Map} />
+          <Route exact path="/add-new-task" component={Form} />
         </div>
       </Router>
     </StoreProvider>
