@@ -9,6 +9,7 @@ import React from "react";
 import "./scss/main.css";
 
 import { StoreProvider } from "easy-peasy";
+import { HashRouter as Router } from "react-router-dom";
 import store from "./store/store";
 
 import Map from "./components/Map";
@@ -17,10 +18,12 @@ import Form from "./components/Form";
 const App = () => {
   return (
     <StoreProvider store={store}>
-      <div className="App">
-        <Map />
-        <Form isActive={false} />
-      </div>
+      <Router>
+        <div className="App">
+          <Map />
+          <Form isActive={false} />
+        </div>
+      </Router>
     </StoreProvider>
   );
 };
