@@ -1,9 +1,8 @@
 // TODO: probbably show this component in the pop up
 // TODO: Show toast pop up the task was added succesfully
 // TODO: add store condition in the store to conditionaly render this form
-// TODO: align dots
+// TODO: add restriction per name
 // TODO: add restriction per position
-// TODO: make form responsive
 
 import React, { useState } from "react";
 

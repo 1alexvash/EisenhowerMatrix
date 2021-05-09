@@ -1,12 +1,14 @@
-// TODO: add ability to click on the dot
+// TODO: show some information on hovering the task
+// TODO: explain what this information means and what should be get done
 
-import React from "react";
+import React, { useState } from "react";
 import { useStoreState } from "easy-peasy";
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const Map = () => {
   const { tasks } = useStoreState((state) => state);
+  const [activeTask, setActiveTask] = useState({});
   console.log("tasks:", tasks);
 
   return (
@@ -21,11 +23,14 @@ const Map = () => {
         {tasks.map((task, index) => (
           <div
             key={index}
-            className="task"
+            className={`${
+              task.name === activeTask.name ? "task active" : "task"
+            }`}
             style={{
               bottom: `${(100 / 11) * task.importance}%`,
               left: `${(100 / 11) * task.urgency}%`,
             }}
+            onClick={() => setActiveTask(task)}
           ></div>
         ))}
       </div>
