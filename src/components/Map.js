@@ -23,8 +23,8 @@ const Map = () => {
             key={index}
             className="task"
             style={{
-              bottom: `${(task.importance * 100) / 11 - 3.5}%`,
-              left: `${(task.urgency * 100) / 11}%`,
+              bottom: `${(100 / 11) * task.importance}%`,
+              left: `${(100 / 11) * task.urgency}%`,
             }}
           ></div>
         ))}
