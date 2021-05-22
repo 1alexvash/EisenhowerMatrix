@@ -5,10 +5,29 @@ const actions = {
     state.tasks.push(payload);
     localStorage.tasks = JSON.stringify(state.tasks);
   }),
-  addTaskThunk: thunk((actions, item) => {
-    console.log("actions:", actions);
-    console.log("item:", item);
-    return 30;
+  addTaskThunk: thunk((actions, payload, { getState }) => {
+    const { tasks } = getState();
+
+    if (
+      tasks.some(
+        ({ name }) => name.toUpperCase() === payload.name.toUpperCase()
+      )
+    ) {
+      return "name error";
+    }
+
+    if (
+      tasks.some(
+        (task) =>
+          task.importance === payload.importance &&
+          task.urgency === payload.urgency
+      )
+    ) {
+      return "coordinates error";
+    }
+
+    actions.addTask(payload);
+    return "success";
   }),
 };
 

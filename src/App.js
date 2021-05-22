@@ -8,6 +8,7 @@
 import React from "react";
 
 import "./scss/main.css";
+import "react-toastify/dist/ReactToastify.css";
 
 import { StoreProvider } from "easy-peasy";
 import { HashRouter as Router, Route } from "react-router-dom";

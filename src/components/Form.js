@@ -9,7 +9,6 @@ import React, { useState } from "react";
 import { useStoreActions } from "easy-peasy";
 
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const initialFormValues = {
   name: "",
@@ -18,7 +17,7 @@ const initialFormValues = {
 };
 
 const Form = ({ history }) => {
-  const { addTask } = useStoreActions((actions) => actions);
+  const { addTaskThunk } = useStoreActions((actions) => actions);
 
   const [formValues, setFormValues] = useState(initialFormValues);
 
@@ -31,18 +30,44 @@ const Form = ({ history }) => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    addTask(formValues);
 
-    setFormValues(initialFormValues);
-    history.push("/");
-    toast.success("✅ The task was added", {
-      position: "bottom-left",
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-    });
+    const status = addTaskThunk(formValues);
+
+    if (status === "name error") {
+      toast.warning("⚠ The task with the same name already exists", {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+
+    if (status === "coordinates error") {
+      toast.warning("⚠ The following coordinates are already taken", {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+
+    if (status === "success") {
+      console.log("status equals success:");
+      setFormValues(initialFormValues);
+      history.push("/");
+      toast.success("✅ The task was added", {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
   }
 
   function isNotValid() {
