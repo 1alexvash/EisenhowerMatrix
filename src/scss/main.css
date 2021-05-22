@@ -289,3 +289,31 @@ input {
   cursor: auto;
   background: grey;
 }
+
+.App .About {
+  padding: 10px 15px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.App .About .text {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.App .About .text p {
+  padding-bottom: 10px;
+}
+
+.App .About .text p:last-child {
+  padding-bottom: 0;
+}
+
+.App .About .image {
+  width: 100%;
+  padding: 10px 15px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}

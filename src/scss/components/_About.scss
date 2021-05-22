@@ -1,0 +1,17 @@
+.About {
+  @include space;
+  .text {
+    margin-bottom: 20px;
+    @include space;
+    p {
+      padding-bottom: 10px;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .image {
+    width: 100%;
+    @include space;
+  }
+}
