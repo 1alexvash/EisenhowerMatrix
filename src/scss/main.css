@@ -170,6 +170,26 @@ input {
   background: purple;
 }
 
+.App .Map .container .task:hover .task-info {
+  opacity: 1;
+}
+
+.App .Map .container .task .task-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  width: 240px;
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 @media (max-width: 840px) {
   .App .Map .container .task {
     width: 40px;

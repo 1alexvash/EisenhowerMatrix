@@ -43,7 +43,21 @@ const Map = () => {
               left: `${(100 / 11) * task.urgency}%`,
             }}
             onClick={() => setActiveTask(task)}
-          ></div>
+          >
+            <div className="task-info">
+              <div>
+                <b>Name: </b>
+                {task.name}
+              </div>
+              <div>
+                <b>Urgency: </b>
+                {task.urgency}
+              </div>
+              <div>
+                <b>Importance: </b> {task.importance}
+              </div>
+            </div>
+          </div>
         ))}
       </div>
       <div className="urgency">
