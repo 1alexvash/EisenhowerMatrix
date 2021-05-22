@@ -1,9 +1,7 @@
 // TODO: create map component with information
 // TODO: ability to edit tasks values
 // TODO: ability to delete tasks
-// TODO: store all the data in localStorage
 // TODO: Create app logo
-// TODO: Add about page
 
 import React from "react";
 

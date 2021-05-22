@@ -1,9 +1,3 @@
-// TODO: probbably show this component in the pop up
-// TODO: Show toast pop up the task was added succesfully
-// TODO: add store condition in the store to conditionaly render this form
-// TODO: add restriction per name
-// TODO: add restriction per position
-
 import React, { useState } from "react";
 
 import { useStoreActions } from "easy-peasy";
