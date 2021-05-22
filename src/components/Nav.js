@@ -10,6 +10,9 @@ const Nav = () => {
       <NavLink exact activeClassName="active" to="/add-new-task">
         New Task
       </NavLink>
+      <NavLink exact activeClassName="active" to="/about">
+        About
+      </NavLink>
     </nav>
   );
 };
