@@ -111,6 +111,21 @@ input {
   position: relative;
 }
 
+.App .Map .container .importance-text {
+  position: absolute;
+  top: 50%;
+  left: -50px;
+  -webkit-transform: translate(-100%, -50%);
+          transform: translate(-100%, -50%);
+}
+
+.App .Map .container .importance-text p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 100%;
+}
+
 .App .Map .container .lines {
   position: absolute;
   top: 0;

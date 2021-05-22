@@ -14,6 +14,18 @@ const Map = () => {
   return (
     <div className="Map">
       <div className="container">
+        <div className="importance-text">
+          <p>I</p>
+          <p>M</p>
+          <p>P</p>
+          <p>O</p>
+          <p>R</p>
+          <p>T</p>
+          <p>A</p>
+          <p>N</p>
+          <p>C</p>
+          <p>E</p>
+        </div>
         <div className="lines lines-horizontal">
           {[numbers.map((n) => <div key={n} className="line" />)]}
         </div>
