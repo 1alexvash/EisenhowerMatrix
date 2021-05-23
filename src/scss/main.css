@@ -70,6 +70,18 @@ input {
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+.App .Map .task-details {
+  padding: 10px 15px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.App .Map .task-details h2 {
+  font-size: 125%;
+  margin-bottom: 20px;
+}
+
 .App .Map .container {
   padding: 10px 15px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);

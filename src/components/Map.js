@@ -25,6 +25,20 @@ const Map = () => {
 
   return (
     <div className="Map">
+      {Object.keys(activeTask).length > 0 && (
+        <div className="task-details">
+          <h2>Task Details:</h2>
+          <p>
+            <b>Name</b>: {activeTask.name}
+          </p>
+          <p>
+            <b>Importance</b>: {activeTask.importance}
+          </p>
+          <p>
+            <b>Urgency:</b>: {activeTask.urgency}
+          </p>
+        </div>
+      )}
       <div className="container">
         <div className="importance-text">
           <p>I</p>
