@@ -98,6 +98,38 @@ input {
   }
 }
 
+.App .Map .task-details .controls {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.App .Map .task-details .controls button {
+  cursor: pointer;
+  padding: 4px 8px;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: white;
+  text-shadow: 1px 1px black;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.App .Map .task-details .controls button.save {
+  background: -webkit-gradient(linear, left top, left bottom, from(#670067), to(#444));
+  background: linear-gradient(#670067, #444);
+}
+
+.App .Map .task-details .controls button.delete {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e60000), to(#444));
+  background: linear-gradient(#e60000, #444);
+}
+
 .App .Map .task-details h2 {
   font-size: 125%;
   margin-bottom: 20px;

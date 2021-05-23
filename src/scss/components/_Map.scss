@@ -16,6 +16,28 @@ $grid-width: 2px;
         opacity: 1;
       }
     }
+    .controls {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      button {
+        cursor: pointer;
+        padding: 4px 8px;
+        border: 1px solid black;
+        border-radius: 4px;
+        color: white;
+        text-shadow: 1px 1px black;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        &.save {
+          background: linear-gradient(darken(purple, 5%), #444);
+        }
+        &.delete {
+          background: linear-gradient(darken(red, 5%), #444);
+        }
+      }
+    }
     h2 {
       font-size: 125%;
       margin-bottom: 20px;

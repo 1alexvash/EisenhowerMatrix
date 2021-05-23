@@ -37,6 +37,12 @@ const Map = () => {
           <p>
             <b>Urgency:</b>: {activeTask.urgency}
           </p>
+          <div className="controls">
+            <button className="save">Save</button>
+            <button className="delete" title="Click on to delete this task">
+              Delete
+            </button>
+          </div>
           <div
             className="close"
             title="Click to close the window"
