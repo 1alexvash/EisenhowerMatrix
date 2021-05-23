@@ -42,54 +42,26 @@ input {
   padding: 10px 15px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 15px 20px;
   margin-bottom: 20px;
 }
 
 .App .Nav a {
-  font-size: 20px;
-  position: relative;
-  margin-right: 10px;
   padding: 5px 10px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  background: #ffc966;
+  -webkit-box-shadow: 0 0 4px 1px orangered;
+          box-shadow: 0 0 4px 1px orangered;
+  border-radius: 4px;
+  margin-right: 15px;
   color: black;
-}
-
-.App .Nav a:before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -4px;
-  right: 0;
-  width: 0;
-  height: 4px;
-  background: #4d004d;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.App .Nav a:after {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 4px;
-  background: #4d004d;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.App .Nav a:hover:before, .App .Nav a.active:before {
-  width: 50%;
-}
-
-.App .Nav a:hover:after, .App .Nav a.active:after {
-  width: 50%;
+.App .Nav a:hover, .App .Nav a.active {
+  color: white;
+  background: orangered;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .App .Map {
@@ -172,7 +144,7 @@ input {
 }
 
 .App .Map .container .task.active, .App .Map .container .task:hover {
-  background: orange;
+  background: orangered;
 }
 
 .App .Map .urgency {
@@ -280,7 +252,7 @@ input {
 }
 
 .App .Form button[type="submit"]:disabled {
-  cursor: auto;
+  cursor: not-allowed;
   background: grey;
 }
 

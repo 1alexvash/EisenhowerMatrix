@@ -51,7 +51,7 @@
       background: darken(purple, 5%);
     }
     &:disabled {
-      cursor: auto;
+      cursor: not-allowed;
       background: grey;
     }
   }
