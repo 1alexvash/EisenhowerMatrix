@@ -1,6 +1,18 @@
 // TODO: show some information on hovering the task
 // TODO: explain what this information means and what should be get done
 
+// => task pop functionalitty:
+// TODO: add some animation when pop up appears
+// TODO: add some rought angle, so it looks like a real pop up
+// TODO: Add ability to edit urgency and importance values by arrows ⬆⬇ (this should be dynamic)
+// TODO:: add ability to delete the pop up
+// TODO: add ability to add description to every task
+// TODO: add save button
+// TODO: every task should have acrronymcs of the task name
+// TODO: every task should have randomly generated color
+// TODO: add ability to change color of the task
+// TODO: every task should have same generates letters
+
 import React, { useState } from "react";
 import { useStoreState } from "easy-peasy";
 
@@ -44,19 +56,7 @@ const Map = () => {
             }}
             onClick={() => setActiveTask(task)}
           >
-            <div className="task-info">
-              <div>
-                <b>Name: </b>
-                {task.name}
-              </div>
-              <div>
-                <b>Urgency: </b>
-                {task.urgency}
-              </div>
-              <div>
-                <b>Importance: </b> {task.importance}
-              </div>
-            </div>
+            {task.name}
           </div>
         ))}
       </div>
