@@ -98,9 +98,9 @@ const Map = () => {
         <div className="lines lines-vertical">
           {[numbers.map((n) => <div key={n} className="line" />)]}
         </div>
-        {tasks.map((task, index) => (
+        {tasks.map((task) => (
           <div
-            key={index}
+            key={task.name}
             className={`${
               task.name === activeTask.name ? "task active" : "task"
             }`}
