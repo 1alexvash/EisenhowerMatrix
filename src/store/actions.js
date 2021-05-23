@@ -29,6 +29,14 @@ const actions = {
     actions.addTask(payload);
     return "success";
   }),
+  deleteTask: action((state, payload) => {
+    console.log("tasks:", state.tasks);
+    console.log("payload:", payload);
+    const index = state.tasks.findIndex(({ name }) => name === payload.name);
+    console.log("index:", index);
+    state.tasks.splice(0, 1);
+    localStorage.tasks = JSON.stringify(state.tasks);
+  }),
 };
 
 export default actions;

@@ -1,3 +1,5 @@
+// TODO: save button should be disabled by default
+
 // TODO: show some information on hovering the task
 // TODO: explain what this information means and what should be get done
 
@@ -14,14 +16,31 @@
 // TODO: every task should have same generates letters
 
 import React, { useState } from "react";
-import { useStoreState } from "easy-peasy";
+import { useStoreState, useStoreActions } from "easy-peasy";
+import { toast } from "react-toastify";
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const Map = () => {
   const { tasks } = useStoreState((state) => state);
+  const { deleteTask } = useStoreActions((actions) => actions);
   const [activeTask, setActiveTask] = useState({});
   console.log("tasks:", tasks);
+
+  const handleDelete = () => {
+    if (window.confirm("Are you sure you want to delete this task?")) {
+      deleteTask(activeTask);
+      setActiveTask({});
+      toast.success("✅ The task was deleted", {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
+  };
 
   return (
     <div className="Map">
@@ -39,7 +58,11 @@ const Map = () => {
           </p>
           <div className="controls">
             <button className="save">Save</button>
-            <button className="delete" title="Click on to delete this task">
+            <button
+              className="delete"
+              title="Click on to delete this task"
+              onClick={handleDelete}
+            >
               Delete
             </button>
           </div>
