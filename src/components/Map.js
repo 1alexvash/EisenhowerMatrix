@@ -56,6 +56,10 @@ const Map = () => {
           <p>
             <b>Urgency:</b>: {activeTask.urgency}
           </p>
+          <p>
+            <b>Total importance score:</b>{" "}
+            {activeTask.importance * activeTask.urgency}
+          </p>
           <div className="controls">
             <button className="save">Save</button>
             <button
