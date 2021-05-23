@@ -75,11 +75,20 @@ input {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
+  position: relative;
 }
 
 .App .Map .task-details h2 {
   font-size: 125%;
   margin-bottom: 20px;
+}
+
+.App .Map .task-details .close {
+  cursor: pointer;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .App .Map .container {

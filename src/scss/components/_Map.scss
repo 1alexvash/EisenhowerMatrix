@@ -6,9 +6,17 @@ $grid-width: 2px;
   .task-details {
     @include space;
     margin-bottom: 20px;
+    position: relative;
     h2 {
       font-size: 125%;
       margin-bottom: 20px;
+    }
+    .close {
+      cursor: pointer;
+      padding: 5px;
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
   .container {

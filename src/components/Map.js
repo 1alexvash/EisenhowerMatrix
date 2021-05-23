@@ -37,6 +37,13 @@ const Map = () => {
           <p>
             <b>Urgency:</b>: {activeTask.urgency}
           </p>
+          <div
+            className="close"
+            title="Click to close the window"
+            onClick={() => setActiveTask({})}
+          >
+            ❌
+          </div>
         </div>
       )}
       <div className="container">
