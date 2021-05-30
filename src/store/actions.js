@@ -43,6 +43,9 @@ const actions = {
   updateTaskValue: action((state, { value, parameter }) => {
     state.activeTask[parameter] = value;
   }),
+  saveTask: action((state, payload) => {
+    console.log("saving task");
+  }),
 };
 
 export default actions;

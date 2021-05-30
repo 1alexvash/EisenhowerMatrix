@@ -4,9 +4,8 @@ import { toast } from "react-toastify";
 
 const TaskDetails = () => {
   const { activeTask } = useStoreState((state) => state);
-  const { deleteTask, setActiveTask, updateTaskValue } = useStoreActions(
-    (actions) => actions
-  );
+  const { deleteTask, setActiveTask, updateTaskValue, saveTask } =
+    useStoreActions((actions) => actions);
 
   const handleDelete = () => {
     if (window.confirm("Are you sure you want to delete this task?")) {
@@ -31,7 +30,18 @@ const TaskDetails = () => {
     <div className="task-details">
       <h2>Task Details:</h2>
       <section>
-        <b>Name</b>: {activeTask.name}
+        <b>Name</b>:{" "}
+        <input
+          className="input-name"
+          type="text"
+          value={activeTask.name}
+          onChange={(e) => {
+            updateTaskValue({
+              value: e.target.value,
+              parameter: "name",
+            });
+          }}
+        />
       </section>
       <section>
         <p>
@@ -92,7 +102,9 @@ const TaskDetails = () => {
         {activeTask.importance * activeTask.urgency}
       </section>
       <div className="controls">
-        <button className="save">Save</button>
+        <button className="save" onClick={saveTask}>
+          Save
+        </button>
         <button
           className="delete"
           title="Click on to delete this task"

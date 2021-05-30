@@ -16,28 +16,6 @@ $grid-width: 2px;
         opacity: 1;
       }
     }
-    .controls {
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      button {
-        cursor: pointer;
-        padding: 4px 8px;
-        border: 1px solid black;
-        border-radius: 4px;
-        color: white;
-        text-shadow: 1px 1px black;
-        font-size: 12px;
-        font-weight: bold;
-        text-transform: uppercase;
-        &.save {
-          background: linear-gradient(darken(purple, 5%), #444);
-        }
-        &.delete {
-          background: linear-gradient(darken(red, 5%), #444);
-        }
-      }
-    }
     h2 {
       font-size: 125%;
       margin-bottom: 20px;
@@ -48,6 +26,17 @@ $grid-width: 2px;
       position: absolute;
       top: 0;
       right: 0;
+    }
+    .input-name {
+      width: inherit;
+      padding: 5px 10px;
+      border-bottom: 2px solid purple;
+      transition: 0.3s;
+      &:focus {
+        box-shadow: 0 0 5px purple;
+        border-radius: 20px;
+        outline: none;
+      }
     }
     .arrows {
       border: 1px solid black;
@@ -81,6 +70,28 @@ $grid-width: 2px;
         background-image: url("../images/arrow-down.png");
         &:active {
           transform: scale(0.9);
+        }
+      }
+    }
+    .controls {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      button {
+        cursor: pointer;
+        padding: 4px 8px;
+        border: 1px solid black;
+        border-radius: 4px;
+        color: white;
+        text-shadow: 1px 1px black;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        &.save {
+          background: linear-gradient(darken(purple, 5%), #444);
+        }
+        &.delete {
+          background: linear-gradient(darken(red, 5%), #444);
         }
       }
     }
