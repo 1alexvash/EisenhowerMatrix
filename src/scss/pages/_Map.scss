@@ -4,7 +4,10 @@ $grid-width: 2px;
 .Map {
   @include space;
   .task-details {
+    border-radius: 4px;
     @include space;
+    box-shadow: 0 0 5px 1px black;
+    background-color: white;
     margin-bottom: 20px;
     position: relative;
     animation: zoomOut 1s;
@@ -30,6 +33,7 @@ $grid-width: 2px;
     .input-name {
       width: inherit;
       padding: 5px 10px;
+      margin-left: 10px;
       border-bottom: 2px solid purple;
       transition: 0.3s;
       &:focus {
@@ -87,7 +91,7 @@ $grid-width: 2px;
         font-size: 12px;
         font-weight: bold;
         text-transform: uppercase;
-        &.save {
+        &.save:not(:disabled) {
           background: linear-gradient(darken(purple, 5%), #444);
         }
         &.delete {

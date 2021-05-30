@@ -19,16 +19,21 @@ import React from "react";
 import { useStoreState, useStoreActions } from "easy-peasy";
 
 import TaskDetails from "./TaskDetails";
+import Modal from "../../UI/Modal";
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 const Map = () => {
-  const { tasks } = useStoreState((state) => state);
+  const { tasks, activeTask } = useStoreState((state) => state);
   const { setActiveTask } = useStoreActions((actions) => actions);
 
   return (
     <div className="Map">
-      <TaskDetails />
+      <Modal
+        show={activeTask !== null}
+        close={() => setActiveTask(null)}
+        component={<TaskDetails />}
+      />
       <div className="container">
         <div className="importance-text">
           <p>I</p>

@@ -3,7 +3,8 @@ import { useStoreState, useStoreActions } from "easy-peasy";
 import { toast } from "react-toastify";
 
 const TaskDetails = () => {
-  const { activeTask } = useStoreState((state) => state);
+  const { tasks, activeTask } = useStoreState((state) => state);
+
   const { deleteTask, setActiveTask, updateTaskValue, saveTask } =
     useStoreActions((actions) => actions);
 
@@ -30,7 +31,7 @@ const TaskDetails = () => {
     <div className="task-details">
       <h2>Task Details:</h2>
       <section>
-        <b>Name</b>:{" "}
+        <b>Name</b>:
         <input
           className="input-name"
           type="text"
@@ -102,7 +103,11 @@ const TaskDetails = () => {
         {activeTask.importance * activeTask.urgency}
       </section>
       <div className="controls">
-        <button className="save" onClick={saveTask}>
+        <button
+          disabled={tasks.indexOf(activeTask) >= 0}
+          className="save"
+          onClick={saveTask}
+        >
           Save
         </button>
         <button

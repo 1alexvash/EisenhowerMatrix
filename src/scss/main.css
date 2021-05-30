@@ -71,9 +71,13 @@ input {
 }
 
 .App .Map .task-details {
+  border-radius: 4px;
   padding: 10px 15px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 5px 1px black;
+          box-shadow: 0 0 5px 1px black;
+  background-color: white;
   margin-bottom: 20px;
   position: relative;
   -webkit-animation: zoomOut 1s;
@@ -114,6 +118,7 @@ input {
 .App .Map .task-details .input-name {
   width: inherit;
   padding: 5px 10px;
+  margin-left: 10px;
   border-bottom: 2px solid purple;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -194,7 +199,7 @@ input {
   text-transform: uppercase;
 }
 
-.App .Map .task-details .controls button.save {
+.App .Map .task-details .controls button.save:not(:disabled) {
   background: -webkit-gradient(linear, left top, left bottom, from(#670067), to(#444));
   background: linear-gradient(#670067, #444);
 }
@@ -416,4 +421,22 @@ input {
   padding: 10px 15px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.App .Modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
