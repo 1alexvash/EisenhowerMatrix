@@ -1,9 +1,9 @@
 import { createStore } from "easy-peasy";
+import state from "./state";
 import actions from "./actions";
 
 const store = createStore({
-  activeTask: null,
-  tasks: localStorage.tasks === undefined ? [] : JSON.parse(localStorage.tasks),
+  ...state,
   ...actions,
 });
 
