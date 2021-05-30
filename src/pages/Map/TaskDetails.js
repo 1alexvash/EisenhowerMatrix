@@ -1,10 +1,6 @@
 import React from "react";
 import { useStoreState, useStoreActions } from "easy-peasy";
 import { toast } from "react-toastify";
-import classNames from "classnames";
-
-import arrowUp from "../../images/arrow-up.png";
-import arrowDown from "../../images/arrow-down.png";
 
 const TaskDetails = () => {
   const { activeTask } = useStoreState((state) => state);
@@ -38,56 +34,56 @@ const TaskDetails = () => {
         <b>Name</b>: {activeTask.name}
       </section>
       <section>
-        <b>Importance</b>: {activeTask.importance}{" "}
+        <p>
+          <b>Importance</b>: {activeTask.importance}
+        </p>
         <div className="arrows">
-          <img
-            src={arrowUp}
-            className={classNames({ disable: activeTask.importance === 10 })}
+          <button
+            className="arrow arrow-up"
+            disabled={activeTask.importance === 10}
             onClick={() => {
               updateTaskValue({
                 value: activeTask.importance + 1,
                 parameter: "importance",
               });
             }}
-            alt=""
           />
-          <img
-            src={arrowDown}
-            className={classNames({ disable: activeTask.importance === 1 })}
+          <button
+            className="arrow arrow-down"
+            disabled={activeTask.importance === 1}
             onClick={() => {
               updateTaskValue({
                 value: activeTask.importance - 1,
                 parameter: "importance",
               });
             }}
-            alt=""
           />
         </div>
       </section>
       <section>
-        <b>Urgency</b>: {activeTask.urgency}{" "}
+        <p>
+          <b>Urgency</b>: {activeTask.urgency}{" "}
+        </p>
         <div className="arrows">
-          <img
-            src={arrowUp}
-            className={classNames({ disable: activeTask.urgency === 10 })}
+          <button
+            className="arrow arrow-up"
+            disabled={activeTask.urgency === 10}
             onClick={() => {
               updateTaskValue({
                 value: activeTask.urgency + 1,
                 parameter: "urgency",
               });
             }}
-            alt=""
           />
-          <img
-            src={arrowDown}
-            className={classNames({ disable: activeTask.urgency === 1 })}
+          <button
+            className="arrow arrow-down"
+            disabled={activeTask.urgency === 1}
             onClick={() => {
               updateTaskValue({
                 value: activeTask.urgency - 1,
                 parameter: "urgency",
               });
             }}
-            alt=""
           />
         </div>
       </section>

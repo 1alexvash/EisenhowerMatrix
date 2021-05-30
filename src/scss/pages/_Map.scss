@@ -50,24 +50,36 @@ $grid-width: 2px;
       right: 0;
     }
     .arrows {
-      display: inline-block;
       border: 1px solid black;
-      padding: 2px 4px 0px;
       border-radius: 4px;
-      img {
-        width: 32px;
+      line-height: 0;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      display: inline-block;
+      .arrow {
         cursor: pointer;
-        &.disable {
-          cursor: no-drop;
-          opacity: 0.5;
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        background-size: 100%;
+        transition: 0.3s;
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.3;
         }
         &:first-child {
           margin-right: 10px;
         }
-        &:first-child:active {
+      }
+      .arrow-up {
+        background-image: url("../images/arrow-up.png");
+        &:active {
           transform: scale(1.1);
         }
-        &:last-child:active {
+      }
+      .arrow-down {
+        background-image: url("../images/arrow-down.png");
+        &:active {
           transform: scale(0.9);
         }
       }

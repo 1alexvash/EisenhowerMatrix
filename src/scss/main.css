@@ -144,32 +144,47 @@ input {
 }
 
 .App .Map .task-details .arrows {
-  display: inline-block;
   border: 1px solid black;
-  padding: 2px 4px 0px;
   border-radius: 4px;
+  line-height: 0;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
-.App .Map .task-details .arrows img {
-  width: 32px;
+.App .Map .task-details .arrows .arrow {
   cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  background-size: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
-.App .Map .task-details .arrows img.disable {
-  cursor: no-drop;
-  opacity: 0.5;
+.App .Map .task-details .arrows .arrow:disabled {
+  cursor: not-allowed;
+  opacity: 0.3;
 }
 
-.App .Map .task-details .arrows img:first-child {
+.App .Map .task-details .arrows .arrow:first-child {
   margin-right: 10px;
 }
 
-.App .Map .task-details .arrows img:first-child:active {
+.App .Map .task-details .arrows .arrow-up {
+  background-image: url("../images/arrow-up.png");
+}
+
+.App .Map .task-details .arrows .arrow-up:active {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.App .Map .task-details .arrows img:last-child:active {
+.App .Map .task-details .arrows .arrow-down {
+  background-image: url("../images/arrow-down.png");
+}
+
+.App .Map .task-details .arrows .arrow-down:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }

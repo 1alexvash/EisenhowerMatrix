@@ -41,9 +41,7 @@ const actions = {
     state.activeTask = payload;
   }),
   updateTaskValue: action((state, { value, parameter }) => {
-    if (value <= 10 && value > 0) {
-      state.activeTask[parameter] = value;
-    }
+    state.activeTask[parameter] = value;
   }),
 };
 
