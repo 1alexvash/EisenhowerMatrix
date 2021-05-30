@@ -143,6 +143,27 @@ input {
   right: 0;
 }
 
+.App .Map .task-details .arrows {
+  display: inline-block;
+  border: 1px solid black;
+  padding: 2px 4px 0px;
+  border-radius: 4px;
+}
+
+.App .Map .task-details .arrows img {
+  width: 32px;
+  cursor: pointer;
+}
+
+.App .Map .task-details .arrows img.disable {
+  cursor: no-drop;
+  opacity: 0.5;
+}
+
+.App .Map .task-details .arrows img:first-child {
+  margin-right: 10px;
+}
+
 .App .Map .container {
   padding: 10px 15px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);

@@ -18,6 +18,8 @@
 import React, { useState } from "react";
 import { useStoreState, useStoreActions } from "easy-peasy";
 import { toast } from "react-toastify";
+import arrowUp from "../images/arrow-up.png";
+import arrowDown from "../images/arrow-down.png";
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -51,13 +53,21 @@ const Map = () => {
             <b>Name</b>: {activeTask.name}
           </p>
           <p>
-            <b>Importance</b>: {activeTask.importance}
+            <b>Importance</b>: {activeTask.importance}{" "}
+            <div className="arrows">
+              <img src={arrowUp} alt="" />
+              <img src={arrowDown} alt="" />
+            </div>
           </p>
           <p>
-            <b>Urgency:</b>: {activeTask.urgency}
+            <b>Urgency</b>: {activeTask.urgency}{" "}
+            <div className="arrows">
+              <img src={arrowUp} alt="" />
+              <img src={arrowDown} alt="" />
+            </div>
           </p>
           <p>
-            <b>Total importance score:</b>{" "}
+            <b>Score</b>: {activeTask.importance} * {activeTask.urgency} ={" "}
             {activeTask.importance * activeTask.urgency}
           </p>
           <div className="controls">

@@ -49,6 +49,23 @@ $grid-width: 2px;
       top: 0;
       right: 0;
     }
+    .arrows {
+      display: inline-block;
+      border: 1px solid black;
+      padding: 2px 4px 0px;
+      border-radius: 4px;
+      img {
+        width: 32px;
+        cursor: pointer;
+        &.disable {
+          cursor: no-drop;
+          opacity: 0.5;
+        }
+        &:first-child {
+          margin-right: 10px;
+        }
+      }
+    }
   }
   .container {
     @include space;
