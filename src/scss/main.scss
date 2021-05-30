@@ -22,8 +22,8 @@ body {
   }
 
   @import "./layouts/Nav";
-  @import "./pages/Map";
-  @import "./pages/Form";
-  @import "./pages/About";
+  @import "./pages/Map/Map";
+  @import "./pages/Form/Form";
+  @import "./pages/About/About";
   @import "./UI/Modal";
 }

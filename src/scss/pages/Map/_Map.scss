@@ -1,0 +1,76 @@
+$grid-color: lightgray;
+$grid-width: 2px;
+
+.Map {
+  @include space;
+  @import "./TaskDetails";
+  .container {
+    @include space;
+    flex: 1;
+    position: relative;
+    padding-top: 100%;
+    padding-bottom: 0;
+    position: relative;
+    .importance-text {
+      position: absolute;
+      top: 50%;
+      left: -50px;
+      transform: translate(-100%, -50%);
+      p {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 100%;
+      }
+    }
+    .lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      &.lines-horizontal {
+        flex-direction: column;
+        .line {
+          background: $grid-color;
+          height: $grid-width;
+        }
+      }
+      &.lines-vertical {
+        .line {
+          background: $grid-color;
+          width: $grid-width;
+        }
+      }
+    }
+    .task {
+      cursor: pointer;
+      position: absolute;
+      transform: translate(-50%, 50%);
+      border: 1px solid black;
+      transition: 0.5s;
+      background: purple;
+      padding: 4px 8px;
+      color: white;
+      text-shadow: 1px 1px black;
+      &.active,
+      &:hover {
+        background: orangered;
+      }
+    }
+  }
+  .urgency {
+    text-align: center;
+    .scale {
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .text {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}

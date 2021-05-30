@@ -1,0 +1,106 @@
+.task-details {
+  @include space;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 1px black;
+  background-color: white;
+  margin-bottom: 20px;
+  position: relative;
+  animation: zoomOut 1s;
+  @keyframes zoomOut {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  h2 {
+    font-size: 125%;
+    margin-bottom: 20px;
+  }
+  .close {
+    cursor: pointer;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .input-name {
+    width: inherit;
+    padding: 4px 8px;
+    margin-left: 8px;
+    border-bottom: 2px solid purple;
+    transition: 0.3s;
+    &:focus {
+      box-shadow: 0 0 5px purple;
+      border-radius: 20px;
+      outline: none;
+    }
+  }
+  .arrows {
+    border: 1px solid black;
+    border-radius: 4px;
+    line-height: 0;
+    padding: 4px 8px;
+    margin-bottom: 8px;
+    display: inline-block;
+    .arrow {
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      background-color: transparent;
+      background-size: 100%;
+      transition: 0.3s;
+      &:disabled {
+        cursor: not-allowed;
+        opacity: 0.3;
+      }
+      &:first-child {
+        margin-right: 5px;
+      }
+    }
+    .arrow-up {
+      background-image: url("../images/arrow-up.png");
+      &:active {
+        transform: scale(1.1);
+      }
+    }
+    .arrow-down {
+      background-image: url("../images/arrow-down.png");
+      &:active {
+        transform: scale(0.9);
+      }
+    }
+  }
+  .controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    button {
+      cursor: pointer;
+      padding: 4px 8px;
+      border: 1px solid black;
+      border-radius: 4px;
+      color: white;
+      text-shadow: 1px 1px black;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      &.save {
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.5;
+        }
+        background: linear-gradient(darken(purple, 5%), #444);
+      }
+      &.delete {
+        transition: 0.3s;
+        opacity: 0.9;
+        background: linear-gradient(darken(red, 5%), #444);
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
