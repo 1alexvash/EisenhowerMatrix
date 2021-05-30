@@ -47,6 +47,7 @@ const actions = {
     const { index, ...activeTask } = state.activeTask;
     state.tasks[index] = { ...activeTask };
     state.activeTask = null;
+    localStorage.tasks = JSON.stringify(state.tasks);
   }),
 };
 

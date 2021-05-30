@@ -1,9 +1,9 @@
 .task-details {
   @include space;
+  width: 250px;
   border-radius: 4px;
   box-shadow: 0 0 5px 1px black;
   background-color: white;
-  margin-bottom: 20px;
   position: relative;
   animation: zoomOut 1s;
   @keyframes zoomOut {
@@ -25,50 +25,58 @@
     top: 0;
     right: 0;
   }
-  .input-name {
-    width: inherit;
-    padding: 4px 8px;
-    margin-left: 8px;
-    border-bottom: 2px solid purple;
-    transition: 0.3s;
-    &:focus {
-      box-shadow: 0 0 5px purple;
-      border-radius: 20px;
-      outline: none;
+  .name {
+    input {
+      padding: 4px 8px;
+      border-bottom: 2px solid purple;
+      transition: 0.3s;
+      &:focus {
+        box-shadow: 0 0 5px purple;
+        border-radius: 20px;
+        outline: none;
+      }
     }
   }
-  .arrows {
-    border: 1px solid black;
-    border-radius: 4px;
-    line-height: 0;
-    padding: 4px 8px;
-    margin-bottom: 8px;
-    display: inline-block;
-    .arrow {
-      cursor: pointer;
-      width: 24px;
-      height: 24px;
-      background-color: transparent;
-      background-size: 100%;
-      transition: 0.3s;
-      &:disabled {
-        cursor: not-allowed;
-        opacity: 0.3;
+  .flex {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    .arrows {
+      border: 1px solid black;
+      border-radius: 4px;
+      line-height: 0;
+      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      margin-top: 5px;
+      .number {
+        color: green;
       }
-      &:first-child {
-        margin-right: 5px;
+      .arrow {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        background-size: 100%;
+        transition: 0.3s;
+        justify-content: space-between;
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.3;
+        }
       }
-    }
-    .arrow-up {
-      background-image: url("../images/arrow-up.png");
-      &:active {
-        transform: scale(1.1);
+      .arrow-up {
+        margin: 0 5px;
+        background-image: url("../images/arrow-up.png");
+        &:active {
+          transform: scale(1.1);
+        }
       }
-    }
-    .arrow-down {
-      background-image: url("../images/arrow-down.png");
-      &:active {
-        transform: scale(0.9);
+      .arrow-down {
+        background-image: url("../images/arrow-down.png");
+        &:active {
+          transform: scale(0.9);
+        }
       }
     }
   }
@@ -87,15 +95,20 @@
       font-weight: bold;
       text-transform: uppercase;
       &.update {
+        &:hover {
+          opacity: 1;
+        }
         &:disabled {
           cursor: not-allowed;
           opacity: 0.5;
         }
+        transition: 0.3s;
+        opacity: 0.85;
         background: linear-gradient(darken(purple, 5%), #444);
       }
       &.delete {
         transition: 0.3s;
-        opacity: 0.9;
+        opacity: 0.85;
         background: linear-gradient(darken(red, 5%), #444);
         &:hover {
           opacity: 1;

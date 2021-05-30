@@ -74,11 +74,11 @@ input {
   padding: 10px 15px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 250px;
   border-radius: 4px;
   -webkit-box-shadow: 0 0 5px 1px black;
           box-shadow: 0 0 5px 1px black;
   background-color: white;
-  margin-bottom: 20px;
   position: relative;
   -webkit-animation: zoomOut 1s;
           animation: zoomOut 1s;
@@ -115,32 +115,49 @@ input {
   right: 0;
 }
 
-.App .Map .task-details .input-name {
-  width: inherit;
+.App .Map .task-details .name input {
   padding: 4px 8px;
-  margin-left: 8px;
   border-bottom: 2px solid purple;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.App .Map .task-details .input-name:focus {
+.App .Map .task-details .name input:focus {
   -webkit-box-shadow: 0 0 5px purple;
           box-shadow: 0 0 5px purple;
   border-radius: 20px;
   outline: none;
 }
 
-.App .Map .task-details .arrows {
+.App .Map .task-details .flex {
+  margin: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.App .Map .task-details .flex .arrows {
   border: 1px solid black;
   border-radius: 4px;
   line-height: 0;
   padding: 4px 8px;
-  margin-bottom: 8px;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
 }
 
-.App .Map .task-details .arrows .arrow {
+.App .Map .task-details .flex .arrows .number {
+  color: green;
+}
+
+.App .Map .task-details .flex .arrows .arrow {
   cursor: pointer;
   width: 24px;
   height: 24px;
@@ -148,31 +165,31 @@ input {
   background-size: 100%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.App .Map .task-details .arrows .arrow:disabled {
+.App .Map .task-details .flex .arrows .arrow:disabled {
   cursor: not-allowed;
   opacity: 0.3;
 }
 
-.App .Map .task-details .arrows .arrow:first-child {
-  margin-right: 5px;
-}
-
-.App .Map .task-details .arrows .arrow-up {
+.App .Map .task-details .flex .arrows .arrow-up {
+  margin: 0 5px;
   background-image: url("../images/arrow-up.png");
 }
 
-.App .Map .task-details .arrows .arrow-up:active {
+.App .Map .task-details .flex .arrows .arrow-up:active {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-.App .Map .task-details .arrows .arrow-down {
+.App .Map .task-details .flex .arrows .arrow-down {
   background-image: url("../images/arrow-down.png");
 }
 
-.App .Map .task-details .arrows .arrow-down:active {
+.App .Map .task-details .flex .arrows .arrow-down:active {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
@@ -200,8 +217,15 @@ input {
 }
 
 .App .Map .task-details .controls button.update {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.85;
   background: -webkit-gradient(linear, left top, left bottom, from(#670067), to(#444));
   background: linear-gradient(#670067, #444);
+}
+
+.App .Map .task-details .controls button.update:hover {
+  opacity: 1;
 }
 
 .App .Map .task-details .controls button.update:disabled {
@@ -212,7 +236,7 @@ input {
 .App .Map .task-details .controls button.delete {
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  opacity: 0.9;
+  opacity: 0.85;
   background: -webkit-gradient(linear, left top, left bottom, from(#e60000), to(#444));
   background: linear-gradient(#e60000, #444);
 }
