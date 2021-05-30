@@ -71,10 +71,10 @@ input {
 }
 
 .App .Map .task-details {
-  border-radius: 4px;
   padding: 10px 15px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
   -webkit-box-shadow: 0 0 5px 1px black;
           box-shadow: 0 0 5px 1px black;
   background-color: white;
@@ -117,8 +117,8 @@ input {
 
 .App .Map .task-details .input-name {
   width: inherit;
-  padding: 5px 10px;
-  margin-left: 10px;
+  padding: 4px 8px;
+  margin-left: 8px;
   border-bottom: 2px solid purple;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -135,15 +135,15 @@ input {
   border: 1px solid black;
   border-radius: 4px;
   line-height: 0;
-  padding: 5px 10px;
-  margin-bottom: 10px;
+  padding: 4px 8px;
+  margin-bottom: 8px;
   display: inline-block;
 }
 
 .App .Map .task-details .arrows .arrow {
   cursor: pointer;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   background-color: transparent;
   background-size: 100%;
   -webkit-transition: 0.3s;
@@ -156,7 +156,7 @@ input {
 }
 
 .App .Map .task-details .arrows .arrow:first-child {
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .App .Map .task-details .arrows .arrow-up {
@@ -199,14 +199,26 @@ input {
   text-transform: uppercase;
 }
 
-.App .Map .task-details .controls button.save:not(:disabled) {
+.App .Map .task-details .controls button.save {
   background: -webkit-gradient(linear, left top, left bottom, from(#670067), to(#444));
   background: linear-gradient(#670067, #444);
 }
 
+.App .Map .task-details .controls button.save:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
 .App .Map .task-details .controls button.delete {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0.9;
   background: -webkit-gradient(linear, left top, left bottom, from(#e60000), to(#444));
   background: linear-gradient(#e60000, #444);
+}
+
+.App .Map .task-details .controls button.delete:hover {
+  opacity: 1;
 }
 
 .App .Map .container {

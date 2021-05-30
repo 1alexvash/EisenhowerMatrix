@@ -29,11 +29,9 @@ const Map = () => {
 
   return (
     <div className="Map">
-      <Modal
-        show={activeTask !== null}
-        close={() => setActiveTask(null)}
-        component={<TaskDetails />}
-      />
+      <Modal show={activeTask !== null} close={() => setActiveTask(null)}>
+        <TaskDetails />
+      </Modal>
       <div className="container">
         <div className="importance-text">
           <p>I</p>
@@ -53,7 +51,7 @@ const Map = () => {
         <div className="lines lines-vertical">
           {[numbers.map((n) => <div key={n} className="line" />)]}
         </div>
-        {tasks.map((task) => (
+        {tasks.map((task, index) => (
           <div
             key={task.name}
             className={`${
@@ -64,7 +62,7 @@ const Map = () => {
               bottom: `${(100 / 11) * task.importance}%`,
               left: `${(100 / 11) * task.urgency}%`,
             }}
-            onClick={() => setActiveTask(task)}
+            onClick={() => setActiveTask({ ...task, index })}
           >
             {task.name}
           </div>

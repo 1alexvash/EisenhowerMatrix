@@ -23,9 +23,11 @@ const TaskDetails = () => {
     }
   };
 
-  if (activeTask === null) {
-    return "";
-  }
+  const isNotValid = () => {
+    return Object.values(tasks[activeTask.index]).every(
+      (val, index) => val === Object.values(activeTask)[index]
+    );
+  };
 
   return (
     <div className="task-details">
@@ -103,11 +105,7 @@ const TaskDetails = () => {
         {activeTask.importance * activeTask.urgency}
       </section>
       <div className="controls">
-        <button
-          disabled={tasks.indexOf(activeTask) >= 0}
-          className="save"
-          onClick={saveTask}
-        >
+        <button disabled={isNotValid()} className="save" onClick={saveTask}>
           Save
         </button>
         <button

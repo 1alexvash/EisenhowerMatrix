@@ -4,8 +4,8 @@ $grid-width: 2px;
 .Map {
   @include space;
   .task-details {
-    border-radius: 4px;
     @include space;
+    border-radius: 4px;
     box-shadow: 0 0 5px 1px black;
     background-color: white;
     margin-bottom: 20px;
@@ -32,8 +32,8 @@ $grid-width: 2px;
     }
     .input-name {
       width: inherit;
-      padding: 5px 10px;
-      margin-left: 10px;
+      padding: 4px 8px;
+      margin-left: 8px;
       border-bottom: 2px solid purple;
       transition: 0.3s;
       &:focus {
@@ -46,13 +46,13 @@ $grid-width: 2px;
       border: 1px solid black;
       border-radius: 4px;
       line-height: 0;
-      padding: 5px 10px;
-      margin-bottom: 10px;
+      padding: 4px 8px;
+      margin-bottom: 8px;
       display: inline-block;
       .arrow {
         cursor: pointer;
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
         background-color: transparent;
         background-size: 100%;
         transition: 0.3s;
@@ -61,7 +61,7 @@ $grid-width: 2px;
           opacity: 0.3;
         }
         &:first-child {
-          margin-right: 10px;
+          margin-right: 5px;
         }
       }
       .arrow-up {
@@ -91,11 +91,20 @@ $grid-width: 2px;
         font-size: 12px;
         font-weight: bold;
         text-transform: uppercase;
-        &.save:not(:disabled) {
+        &.save {
+          &:disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+          }
           background: linear-gradient(darken(purple, 5%), #444);
         }
         &.delete {
+          transition: 0.3s;
+          opacity: 0.9;
           background: linear-gradient(darken(red, 5%), #444);
+          &:hover {
+            opacity: 1;
+          }
         }
       }
     }
