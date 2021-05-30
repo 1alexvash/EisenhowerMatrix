@@ -64,6 +64,12 @@ $grid-width: 2px;
         &:first-child {
           margin-right: 10px;
         }
+        &:first-child:active {
+          transform: scale(1.1);
+        }
+        &:last-child:active {
+          transform: scale(0.9);
+        }
       }
     }
   }

@@ -164,6 +164,16 @@ input {
   margin-right: 10px;
 }
 
+.App .Map .task-details .arrows img:first-child:active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.App .Map .task-details .arrows img:last-child:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 .App .Map .container {
   padding: 10px 15px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
