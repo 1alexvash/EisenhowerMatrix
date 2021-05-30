@@ -12,10 +12,10 @@ import { StoreProvider } from "easy-peasy";
 import { HashRouter as Router, Route } from "react-router-dom";
 import store from "./store/store";
 
-import Nav from "./components/Nav";
-import Map from "./components/Map";
-import Form from "./components/Form";
-import About from "./components/About";
+import Nav from "./layouts/Nav";
+import Map from "./pages/Map/Map";
+import Form from "./pages/Form/Form";
+import About from "./pages/About/About";
 
 import { ToastContainer } from "react-toastify";
 

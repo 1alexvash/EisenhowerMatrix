@@ -21,8 +21,8 @@ body {
     width: 100%;
   }
 
-  @import "./components/Nav";
-  @import "./components/Map";
-  @import "./components/Form";
-  @import "./components/About";
+  @import "./layouts/Nav";
+  @import "./pages/Map";
+  @import "./pages/Form";
+  @import "./pages/About";
 }

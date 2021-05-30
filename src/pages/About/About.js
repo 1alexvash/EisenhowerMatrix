@@ -1,6 +1,6 @@
 import React from "react";
 
-import SchemeImage from "../images/scheme.png";
+import SchemeImage from "../../images/scheme.png";
 
 const About = () => {
   return (

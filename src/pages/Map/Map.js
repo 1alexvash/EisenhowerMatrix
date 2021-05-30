@@ -18,8 +18,8 @@
 import React, { useState } from "react";
 import { useStoreState, useStoreActions } from "easy-peasy";
 import { toast } from "react-toastify";
-import arrowUp from "../images/arrow-up.png";
-import arrowDown from "../images/arrow-down.png";
+import arrowUp from "../../images/arrow-up.png";
+import arrowDown from "../../images/arrow-down.png";
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
