@@ -58,6 +58,7 @@ $grid-width: 2px;
       &.active,
       &:hover {
         background: orangered;
+        z-index: 1;
       }
     }
   }

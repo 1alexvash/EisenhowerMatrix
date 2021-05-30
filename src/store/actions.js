@@ -43,8 +43,10 @@ const actions = {
   updateTaskValue: action((state, { value, parameter }) => {
     state.activeTask[parameter] = value;
   }),
-  saveTask: action((state, payload) => {
-    console.log("saving task");
+  updateTask: action((state, payload) => {
+    const { index, ...activeTask } = state.activeTask;
+    state.tasks[index] = { ...activeTask };
+    state.activeTask = null;
   }),
 };
 

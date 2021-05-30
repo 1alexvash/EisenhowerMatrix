@@ -1,19 +1,6 @@
-// TODO: save button should be disabled by default
-
-// TODO: show some information on hovering the task
-// TODO: explain what this information means and what should be get done
-
-// => task pop functionalitty:
-// TODO: add some animation when pop up appears
-// TODO: add some rought angle, so it looks like a real pop up
-// TODO: Add ability to edit urgency and importance values by arrows ⬆⬇ (this should be dynamic)
-// TODO:: add ability to delete the pop up
 // TODO: add ability to add description to every task
-// TODO: add save button
-// TODO: every task should have acrronymcs of the task name
 // TODO: every task should have randomly generated color
 // TODO: add ability to change color of the task
-// TODO: every task should have same generates letters
 
 import React from "react";
 import { useStoreState, useStoreActions } from "easy-peasy";

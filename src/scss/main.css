@@ -199,12 +199,12 @@ input {
   text-transform: uppercase;
 }
 
-.App .Map .task-details .controls button.save {
+.App .Map .task-details .controls button.update {
   background: -webkit-gradient(linear, left top, left bottom, from(#670067), to(#444));
   background: linear-gradient(#670067, #444);
 }
 
-.App .Map .task-details .controls button.save:disabled {
+.App .Map .task-details .controls button.update:disabled {
   cursor: not-allowed;
   opacity: 0.5;
 }
@@ -296,6 +296,7 @@ input {
 
 .App .Map .container .task.active, .App .Map .container .task:hover {
   background: orangered;
+  z-index: 1;
 }
 
 .App .Map .urgency {

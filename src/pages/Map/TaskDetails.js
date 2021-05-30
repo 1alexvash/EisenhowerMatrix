@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 const TaskDetails = () => {
   const { tasks, activeTask } = useStoreState((state) => state);
 
-  const { deleteTask, setActiveTask, updateTaskValue, saveTask } =
+  const { deleteTask, setActiveTask, updateTaskValue, updateTask } =
     useStoreActions((actions) => actions);
 
   const handleDelete = () => {
@@ -105,8 +105,8 @@ const TaskDetails = () => {
         {activeTask.importance * activeTask.urgency}
       </section>
       <div className="controls">
-        <button disabled={isNotValid()} className="save" onClick={saveTask}>
-          Save
+        <button disabled={isNotValid()} className="update" onClick={updateTask}>
+          Update
         </button>
         <button
           className="delete"
