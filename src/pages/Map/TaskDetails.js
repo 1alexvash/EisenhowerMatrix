@@ -1,6 +1,7 @@
 import React from "react";
 import { useStoreState, useStoreActions } from "easy-peasy";
 import { toast } from "react-toastify";
+import classNames from "classnames";
 
 import arrowUp from "../../images/arrow-up.png";
 import arrowDown from "../../images/arrow-down.png";
@@ -41,6 +42,7 @@ const TaskDetails = () => {
         <div className="arrows">
           <img
             src={arrowUp}
+            className={classNames({ disable: activeTask.importance === 10 })}
             onClick={() => {
               updateTaskValue({
                 value: activeTask.importance + 1,
@@ -51,6 +53,7 @@ const TaskDetails = () => {
           />
           <img
             src={arrowDown}
+            className={classNames({ disable: activeTask.importance === 1 })}
             onClick={() => {
               updateTaskValue({
                 value: activeTask.importance - 1,
@@ -66,6 +69,7 @@ const TaskDetails = () => {
         <div className="arrows">
           <img
             src={arrowUp}
+            className={classNames({ disable: activeTask.urgency === 10 })}
             onClick={() => {
               updateTaskValue({
                 value: activeTask.urgency + 1,
@@ -76,6 +80,7 @@ const TaskDetails = () => {
           />
           <img
             src={arrowDown}
+            className={classNames({ disable: activeTask.urgency === 1 })}
             onClick={() => {
               updateTaskValue({
                 value: activeTask.urgency - 1,
