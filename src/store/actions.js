@@ -37,6 +37,14 @@ const actions = {
     state.tasks.splice(0, 1);
     localStorage.tasks = JSON.stringify(state.tasks);
   }),
+  setActiveTask: action((state, payload) => {
+    state.activeTask = payload;
+  }),
+  updateTaskValue: action((state, { value, parameter }) => {
+    if (value <= 10 && value > 0) {
+      state.activeTask[parameter] = value;
+    }
+  }),
 };
 
 export default actions;
