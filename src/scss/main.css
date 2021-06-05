@@ -57,6 +57,17 @@ input {
   transition: 0.3s;
 }
 
+@media (max-width: 480px) {
+  .App .Nav a {
+    width: 100%;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    display: block;
+    border-bottom: 2px solid #333;
+  }
+}
+
 .App .Nav a:hover, .App .Nav a.active {
   color: white;
   background: orangered;
@@ -265,6 +276,29 @@ input {
   opacity: 1;
 }
 
+.App .Map .scroll {
+  overflow: auto;
+}
+
+.App .Map .scroll p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+@media (max-width: 800px) {
+  .App .Map .scroll .container {
+    min-width: 800px;
+    min-height: 800px;
+  }
+}
+
+@media (max-width: 640px) {
+  .App .Map .scroll .container {
+    min-width: 640px;
+    min-height: 640px;
+  }
+}
+
 .App .Map .container {
   padding: 10px 15px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -276,21 +310,8 @@ input {
   padding-top: 100%;
   padding-bottom: 0;
   position: relative;
-}
-
-.App .Map .container .importance-text {
-  position: absolute;
-  top: 50%;
-  left: -50px;
-  -webkit-transform: translate(-100%, -50%);
-          transform: translate(-100%, -50%);
-}
-
-.App .Map .container .importance-text p {
-  text-align: center;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .App .Map .container .lines {
@@ -362,7 +383,7 @@ input {
   font-size: 20px;
 }
 
-.App .Form {
+.App .AddNewTask {
   font-size: 20px;
   width: 400px;
   margin: 25px auto;
@@ -371,7 +392,14 @@ input {
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.App .Form input[type="text"] {
+@media (max-width: 480px) {
+  .App .AddNewTask {
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+.App .AddNewTask input[type="text"] {
   margin: 5px 0 10px;
   padding: 5px 10px;
   -webkit-box-shadow: 0 0 2px purple;
@@ -380,13 +408,13 @@ input {
   transition: 0.3s;
 }
 
-.App .Form input[type="text"]:focus {
+.App .AddNewTask input[type="text"]:focus {
   outline: none;
   -webkit-box-shadow: 0 0 5px #4d004d;
           box-shadow: 0 0 5px #4d004d;
 }
 
-.App .Form .flex {
+.App .AddNewTask .flex {
   margin: 5px 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -396,7 +424,7 @@ input {
           align-items: center;
 }
 
-.App .Form .flex .number {
+.App .AddNewTask .flex .number {
   border: 1px solid #333;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -422,17 +450,17 @@ input {
   transition: 0.3s;
 }
 
-.App .Form .flex .number:disabled {
+.App .AddNewTask .flex .number:disabled {
   background: grey;
 }
 
-.App .Form .flex input {
+.App .AddNewTask .flex input {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.App .Form button[type="submit"] {
+.App .AddNewTask button[type="submit"] {
   cursor: pointer;
   padding: 8px 20px;
   border: 1px solid black;
@@ -443,11 +471,11 @@ input {
   transition: 0.3s;
 }
 
-.App .Form button[type="submit"]:hover {
+.App .AddNewTask button[type="submit"]:hover {
   background: #670067;
 }
 
-.App .Form button[type="submit"]:disabled {
+.App .AddNewTask button[type="submit"]:disabled {
   cursor: not-allowed;
   background: grey;
 }

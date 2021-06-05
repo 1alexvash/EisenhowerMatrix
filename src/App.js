@@ -12,7 +12,7 @@ import store from "./store/store";
 
 import Nav from "./layouts/Nav";
 import Map from "./pages/Map/Map";
-import Form from "./pages/Form/Form";
+import AddNewTask from "./pages/AddNewTask/AddNewTask";
 import About from "./pages/About/About";
 
 import { ToastContainer } from "react-toastify";
@@ -24,7 +24,7 @@ const App = () => {
         <div className="App">
           <Nav />
           <Route exact path="/" component={Map} />
-          <Route exact path="/add-new-task" component={Form} />
+          <Route exact path="/add-new-task" component={AddNewTask} />
           <Route exact path="/about" component={About} />
         </div>
       </Router>

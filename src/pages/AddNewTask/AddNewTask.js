@@ -10,7 +10,7 @@ const initialFormValues = {
   urgency: 0,
 };
 
-const Form = ({ history }) => {
+const AddNewTask = ({ history }) => {
   const { addTaskThunk } = useStoreActions((actions) => actions);
 
   const [formValues, setFormValues] = useState(initialFormValues);
@@ -70,7 +70,7 @@ const Form = ({ history }) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="Form">
+    <form onSubmit={handleSubmit} className="AddNewTask">
       <label>Name of the task:</label>
       <input
         type="text"
@@ -114,4 +114,4 @@ const Form = ({ history }) => {
   );
 };
 
-export default Form;
+export default AddNewTask;

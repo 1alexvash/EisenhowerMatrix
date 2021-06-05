@@ -1,8 +1,12 @@
-.Form {
+.AddNewTask {
   font-size: 20px;
   width: 400px;
   margin: 25px auto;
   @include space;
+  @include responsive(480px) {
+    font-size: 16px;
+    width: 100%;
+  }
   input[type="text"] {
     margin: 5px 0 10px;
     padding: 5px 10px;
