@@ -410,7 +410,6 @@ input {
 
 .App .Map .container .task.active, .App .Map .container .task:hover {
   background: orangered;
-  z-index: 1;
 }
 
 .App .Map .urgency {
