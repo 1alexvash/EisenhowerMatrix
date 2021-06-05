@@ -39,7 +39,6 @@ const TaskDetails = () => {
       <h2>Task Details:</h2>
       <section className="name">
         <input
-          className="input-name"
           type="text"
           value={activeTask.name}
           placeholder="Name of the task"
@@ -112,6 +111,20 @@ const TaskDetails = () => {
       <section className="score">
         <b>Score</b>: {activeTask.importance} * {activeTask.urgency} ={" "}
         {activeTask.importance * activeTask.urgency}
+      </section>
+      <section className="description">
+        <textarea
+          type="text"
+          value={activeTask.description}
+          placeholder="Additional description"
+          onChange={(e) => {
+            updateTaskValue({
+              value: e.target.value,
+              parameter: "description",
+            });
+          }}
+          rows="3"
+        />
       </section>
       <section className="controls">
         <button className="update" type="submit" disabled={isNotValid()}>

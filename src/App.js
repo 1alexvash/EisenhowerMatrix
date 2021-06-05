@@ -1,7 +1,5 @@
-// TODO: create map component with information
-// TODO: ability to edit tasks values
-// TODO: ability to delete tasks
 // TODO: Create app logo
+// TODO: work on mobile version 1) navbar 2) map component should be scrollable
 
 import React from "react";
 

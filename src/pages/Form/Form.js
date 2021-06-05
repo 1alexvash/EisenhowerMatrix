@@ -25,7 +25,7 @@ const Form = ({ history }) => {
   function handleSubmit(e) {
     e.preventDefault();
 
-    const status = addTaskThunk(formValues);
+    const status = addTaskThunk({ ...formValues, description: "" });
 
     if (status === "name error") {
       toast.warning("⚠ The task with the same name already exists", {

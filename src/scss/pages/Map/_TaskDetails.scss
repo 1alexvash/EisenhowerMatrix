@@ -80,6 +80,21 @@
       }
     }
   }
+  .description {
+    margin-top: 10px;
+    textarea {
+      width: 100%;
+      resize: none;
+      padding: 4px 8px;
+      border: 1px solid purple;
+      transition: 0.3s;
+      &:focus {
+        box-shadow: 0 0 5px purple;
+        border-radius: 8px;
+        outline: none;
+      }
+    }
+  }
   .controls {
     margin-top: 20px;
     display: flex;

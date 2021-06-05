@@ -194,6 +194,26 @@ input {
           transform: scale(0.9);
 }
 
+.App .Map .task-details .description {
+  margin-top: 10px;
+}
+
+.App .Map .task-details .description textarea {
+  width: 100%;
+  resize: none;
+  padding: 4px 8px;
+  border: 1px solid purple;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .Map .task-details .description textarea:focus {
+  -webkit-box-shadow: 0 0 5px purple;
+          box-shadow: 0 0 5px purple;
+  border-radius: 8px;
+  outline: none;
+}
+
 .App .Map .task-details .controls {
   margin-top: 20px;
   display: -webkit-box;
