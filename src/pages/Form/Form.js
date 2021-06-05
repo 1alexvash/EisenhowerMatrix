@@ -50,7 +50,6 @@ const Form = ({ history }) => {
     }
 
     if (status === "success") {
-      console.log("status equals success:");
       setFormValues(initialFormValues);
       history.push("/");
       toast.success("✅ The task was added", {

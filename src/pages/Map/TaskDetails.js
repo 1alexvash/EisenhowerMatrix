@@ -1,5 +1,3 @@
-// TODO: add ability to update taks by pushing eneter button
-
 import React from "react";
 import { useStoreState, useStoreActions } from "easy-peasy";
 import { toast } from "react-toastify";
@@ -31,8 +29,13 @@ const TaskDetails = () => {
     );
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    updateTask();
+  };
+
   return (
-    <div className="task-details">
+    <form onSubmit={handleSubmit} className="task-details">
       <h2>Task Details:</h2>
       <section className="name">
         <input
@@ -55,6 +58,7 @@ const TaskDetails = () => {
             <span className="number">{activeTask.importance}</span>
             <button
               className="arrow arrow-up"
+              type="button"
               disabled={activeTask.importance === 10}
               onClick={() => {
                 updateTaskValue({
@@ -65,6 +69,7 @@ const TaskDetails = () => {
             />
             <button
               className="arrow arrow-down"
+              type="button"
               disabled={activeTask.importance === 1}
               onClick={() => {
                 updateTaskValue({
@@ -81,6 +86,7 @@ const TaskDetails = () => {
             <span className="number">{activeTask.urgency}</span>
             <button
               className="arrow arrow-up"
+              type="button"
               disabled={activeTask.urgency === 10}
               onClick={() => {
                 updateTaskValue({
@@ -91,6 +97,7 @@ const TaskDetails = () => {
             />
             <button
               className="arrow arrow-down"
+              type="button"
               disabled={activeTask.urgency === 1}
               onClick={() => {
                 updateTaskValue({
@@ -107,11 +114,12 @@ const TaskDetails = () => {
         {activeTask.importance * activeTask.urgency}
       </section>
       <section className="controls">
-        <button disabled={isNotValid()} className="update" onClick={updateTask}>
+        <button className="update" type="submit" disabled={isNotValid()}>
           Update
         </button>
         <button
           className="delete"
+          type="button"
           title="Click on to delete this task"
           onClick={handleDelete}
         >
@@ -125,7 +133,7 @@ const TaskDetails = () => {
       >
         ❌
       </div>
-    </div>
+    </form>
   );
 };
 
