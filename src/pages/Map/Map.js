@@ -17,7 +17,7 @@ const Map = () => {
       <Modal show={activeTask !== null} close={() => setActiveTask(null)}>
         <TaskDetails />
       </Modal>
-      <div className={classNames("scroll", { active: fitToScreen })}>
+      <div className={classNames("scroll", { active: !fitToScreen })}>
         <p className="text">Importance</p>
         <p className="fit-to-screen">
           Fit to screen:
@@ -29,7 +29,13 @@ const Map = () => {
         </p>
         <div className="container">
           <div className="lines lines-horizontal">
-            {[numbers.map((n) => <div key={n} className="line" />)]}
+            {[
+              numbers.map((n) => (
+                <div key={n} className="line">
+                  <span>{n}</span>
+                </div>
+              )),
+            ]}
           </div>
           <div className="lines lines-vertical">
             {[numbers.map((n) => <div key={n} className="line" />)]}
@@ -51,12 +57,12 @@ const Map = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="urgency">
-        <div className="scale">
-          {[numbers.map((number) => <span key={number}>{number}</span>)]}
+        <div className="urgency">
+          <div className="scale">
+            {[numbers.map((number) => <span key={number}>{number}</span>)]}
+          </div>
+          <div className="text">Urgency</div>
         </div>
-        <div className="text">Urgency</div>
       </div>
     </div>
   );

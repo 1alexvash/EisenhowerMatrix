@@ -34,6 +34,21 @@ $grid-width: 2px;
           min-width: 640px;
           min-height: 640px;
         }
+        @include responsive(480px) {
+          min-width: 480px;
+          min-height: 480px;
+        }
+      }
+      .urgency {
+        @include responsive(800px) {
+          min-width: 800px;
+        }
+        @include responsive(640px) {
+          min-width: 640px;
+        }
+        @include responsive(480px) {
+          min-width: 480px;
+        }
       }
     }
   }
@@ -54,10 +69,15 @@ $grid-width: 2px;
       display: flex;
       justify-content: space-evenly;
       &.lines-horizontal {
-        flex-direction: column;
+        flex-direction: column-reverse;
         .line {
           background: $grid-color;
           height: $grid-width;
+        }
+        span {
+          padding-top: 5px;
+          padding-left: 5px;
+          display: inline-block;
         }
       }
       &.lines-vertical {
@@ -85,13 +105,14 @@ $grid-width: 2px;
     }
   }
   .urgency {
-    text-align: center;
+    text-align: right;
     .scale {
       margin: 10px 0;
       display: flex;
       justify-content: space-evenly;
     }
     .text {
+      margin-right: 3%;
       font-weight: bold;
       font-size: 20px;
     }
