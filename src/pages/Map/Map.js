@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useStoreState, useStoreActions } from "easy-peasy";
-import classnames from "classnames";
+import classNames from "classnames";
 
 import TaskDetails from "./TaskDetails";
 import Modal from "../../UI/Modal";
@@ -17,7 +17,7 @@ const Map = () => {
       <Modal show={activeTask !== null} close={() => setActiveTask(null)}>
         <TaskDetails />
       </Modal>
-      <div className="scroll">
+      <div className={classNames("scroll", { active: fitToScreen })}>
         <p className="text">Importance</p>
         <p className="fit-to-screen">
           Fit to screen:

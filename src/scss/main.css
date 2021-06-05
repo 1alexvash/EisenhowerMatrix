@@ -276,24 +276,42 @@ input {
   opacity: 1;
 }
 
-.App .Map .scroll {
-  overflow: auto;
-}
-
-.App .Map .scroll p {
+.App .Map .scroll .text {
   font-weight: bold;
   font-size: 20px;
 }
 
+.App .Map .scroll .fit-to-screen {
+  display: none;
+}
+
 @media (max-width: 800px) {
-  .App .Map .scroll .container {
+  .App .Map .scroll .fit-to-screen {
+    display: block;
+  }
+}
+
+.App .Map .scroll .fit-to-screen input {
+  position: relative;
+  top: 3px;
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.App .Map .scroll.active {
+  overflow: auto;
+}
+
+@media (max-width: 800px) {
+  .App .Map .scroll.active .container {
     min-width: 800px;
     min-height: 800px;
   }
 }
 
 @media (max-width: 640px) {
-  .App .Map .scroll .container {
+  .App .Map .scroll.active .container {
     min-width: 640px;
     min-height: 640px;
   }
@@ -484,6 +502,12 @@ input {
   padding: 10px 15px;
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 480px) {
+  .App .About {
+    font-size: 14px;
+  }
 }
 
 .App .About .text {

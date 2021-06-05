@@ -5,19 +5,35 @@ $grid-width: 2px;
   @include space;
   @import "./TaskDetails";
   .scroll {
-    overflow: auto;
-    p {
+    .text {
       font-weight: bold;
       font-size: 20px;
     }
-    .container {
+    .fit-to-screen {
+      display: none;
       @include responsive(800px) {
-        min-width: 800px;
-        min-height: 800px;
+        display: block;
       }
-      @include responsive(640px) {
-        min-width: 640px;
-        min-height: 640px;
+      input {
+        position: relative;
+        top: 3px;
+        margin-left: 8px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &.active {
+      overflow: auto;
+
+      .container {
+        @include responsive(800px) {
+          min-width: 800px;
+          min-height: 800px;
+        }
+        @include responsive(640px) {
+          min-width: 640px;
+          min-height: 640px;
+        }
       }
     }
   }
