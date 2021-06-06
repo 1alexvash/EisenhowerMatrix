@@ -1,8 +1,5 @@
 .About {
   @include space;
-  @include responsive(480px) {
-    font-size: 14px;
-  }
   .text {
     margin-bottom: 20px;
     @include space;

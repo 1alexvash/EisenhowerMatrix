@@ -539,12 +539,6 @@ input {
           box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 480px) {
-  .App .About {
-    font-size: 14px;
-  }
-}
-
 .App .About .text {
   margin-bottom: 20px;
   padding: 10px 15px;

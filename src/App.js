@@ -1,6 +1,3 @@
-// TODO: Create app logo
-// TODO: work on mobile version 1) navbar 2) map component should be scrollable
-
 import React from "react";
 
 import "./scss/main.css";
